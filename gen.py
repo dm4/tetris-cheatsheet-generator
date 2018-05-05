@@ -37,7 +37,7 @@ IIIIOOT JJ
 # initialize
 sub_images = []
 blocks = {}
-block_names = ['I', 'O', 'T', 'J', 'L', 'S', 'Z', 'B'] # B for background
+block_names = ['I', 'O', 'T', 'J', 'L', 'S', 'Z', 'X', 'B']
 (block_width, block_height) = (18, 18)
 for block in block_names:
     blocks[block] = Image.open('images/' + block + '.png')
@@ -79,4 +79,3 @@ for im in sub_images:
     current_height += (im.size[1] + margin_height)
 
 output.save('output.png')
-
